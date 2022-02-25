@@ -59,5 +59,38 @@ header nav a{
     margin-bottom: 25px;
     padding: 25px 25% 25px 25px;
     border-radius: 15px 0 0 0;
+}
 
+.about-me{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.about-me h2{
+    width: 30%;
+}
+
+.about-me div{
+    width: 70%;
+}
+
+.my-work{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.my-work h2{
+    width: 30%;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+footer h3{
+    width: 30%
 }
