@@ -28,6 +28,7 @@ header{
     flex: 0 1 50%;
     color: var(--dark);
     border-radius: 0 15px 0 0;
+    line-height: 1.5;
 }
 
 header nav{
@@ -39,4 +40,24 @@ header nav{
 header nav a{
     padding-right: 2vw;
     flex-grow: 1;
+}
+
+.hero-display{
+    background-image: url(./images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    height: 45vw;
+}
+
+.hero-display h2{
+    background-color: var(--dark);
+    color: var(--clear);
+    margin-bottom: 25px;
+    padding: 25px 25% 25px 25px;
+    border-radius: 15px 0 0 0;
+
 }
