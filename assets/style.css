@@ -94,6 +94,48 @@ header nav a{
     text-align: center;
 }
 
+
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.card h4, .card p{
+    background-color:#AFA3B4;
+    color: #EABFA0;
+}
+
+.card1{
+    background-image: url(./images/book.jpg);
+}
+.card2{
+    background-image: url(./images/calculator.jpg);
+}
+.card3{
+    background-image: url(./images/corgi.jpg);
+}
+.card4{
+    background-image: url(./images/plane.jpg);
+}
+.card5{
+    background-image: url(./images/rain.jpg);
+}
+.card6{
+    background-image: url(./images/town.jpg);
+}
+
 footer {
     display: flex;
     width: 100%;
