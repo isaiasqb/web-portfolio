@@ -51,6 +51,7 @@ header nav a{
     justify-content:flex-end;
     align-items: flex-end;
     height: 45vw;
+    margin-bottom: 30px;;
 }
 
 .hero-display h2{
@@ -64,11 +65,15 @@ header nav a{
 .about-me{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
 .about-me h2{
-    width: 30%;
+    width: 20%;
+    border-right: #EBA0A6 7px solid;
+    margin: 0 20px 0 0;
+    text-align: center;
 }
 
 .about-me div{
@@ -78,19 +83,30 @@ header nav a{
 .my-work{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
 .my-work h2{
-    width: 30%;
+    width: 20%;
+    border-right: #EBA0A6 7px solid;
+    margin: 0 20px 0 0;
+    text-align: center;
 }
 
 footer {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     margin-bottom: 30px;
+    align-items: center;
 }
 
 footer h3{
-    width: 30%
+    width: 20%;
+    border-right: #EBA0A6 7px solid;
+    margin: 0 20px 0 0;
+    background-color: #EBA0A6;
+    text-align: center;
+    padding: 15px 15px
 }
