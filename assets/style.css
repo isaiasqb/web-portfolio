@@ -114,12 +114,13 @@ header nav a{
 .card{
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 20vw;
     height: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 30px;
+    margin: 0 10px 30px 10px;
 }
 
 .card h4, .card p{
@@ -129,21 +130,27 @@ header nav a{
 
 .card1{
     background-image: url(./images/book.jpg);
+    flex: 2 0 100% ;
 }
 .card2{
     background-image: url(./images/calculator.jpg);
+    flex: 1 0 33% ;
 }
 .card3{
     background-image: url(./images/corgi.jpg);
+    flex: 1 0 33% ;
 }
 .card4{
     background-image: url(./images/plane.jpg);
+    flex: 1 0 100% ;
 }
 .card5{
     background-image: url(./images/rain.jpg);
+    flex: 1 0 33% ;
 }
 .card6{
     background-image: url(./images/town.jpg);
+    flex: 1 0 33% ;
 }
 
 footer {
