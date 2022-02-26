@@ -1,5 +1,5 @@
 :root{
-    --primary:#EBA0A6;
+    --accent:#EBA0A6;
     --secondary:#AFA3B4;
     --clear:#EABFA0;
     --dark:#3F3637;
@@ -25,7 +25,7 @@ header{
 }
 
 .title-name{
-    background-color: var(--primary);
+    background-color: var(--accent);
     flex: 0 1 50%;
     color: var(--dark);
     border-radius: 0 15px 0 0;
@@ -73,7 +73,7 @@ header nav a{
 
 .about-me h2{
     width: 20%;
-    border-right: #EBA0A6 7px solid;
+    border-right: var(--accent) 7px solid;
     margin: 0 20px 0 0;
     text-align: center;
 }
@@ -98,7 +98,7 @@ header nav a{
 
 .my-work h2{
     width: 20%;
-    border-right: #EBA0A6 7px solid;
+    border-right: var(--accent) 7px solid;
     margin: 0 20px 0 0;
     text-align: center;
 }
@@ -164,7 +164,7 @@ footer {
 footer h3{
     width: 20%;
     margin: 0 20px 0 0;
-    background-color: #EBA0A6;
+    background-color: var(--accent);
     text-align: center;
     padding: 15px 15px
 }
@@ -181,4 +181,94 @@ footer h3{
 .contact-info ul li {
     list-style: none;
     flex-wrap: wrap;
+}
+
+/* MEDIA QUERIES FOR DIFFERENT SCREEN SIZES */
+
+@media screen and (max-width: 980px){
+    header{
+        flex-direction: column;
+    }
+
+    header .title-name{
+        border-radius: 0 20px 20px 0;
+        width: 80%;
+        align-self: flex-start;
+    }
+
+    header nav{
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        width: 100%;
+        margin-top: 2vw;
+        justify-content: space-around;
+    }
+
+    .hero-display h2 {
+        width: 85%;
+        font-weight:normal;
+        font-style: italic;
+        margin: 0;
+    }
+
+    .about-me{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me h2{
+        border: none;
+        background-color: var(--clear);
+        width: 75%;
+        align-self: flex-start;
+        text-align: end;
+        padding: 1.5% 15% 1.5% 0;
+        margin-bottom: 1.5%;
+        border-radius: 0 15px 15px 0;
+        color: #3F3637;
+    }
+
+    .my-work{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-work h2 {
+        border: none;
+        background-color: var(--clear);
+        width: 75%;
+        align-self: flex-start;
+        text-align: end;
+        padding: 1.5% 15% 1.5% 0;
+        margin-bottom: 1.5%;
+        border-radius: 0 15px 15px 0;
+        color: #3F3637;
+    }
+
+    .card{
+        height: 40vw;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    footer h3{
+        background-color: var(--accent);
+        width: 100%;
+        margin-bottom: 2%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 575px){
+
+
 }
