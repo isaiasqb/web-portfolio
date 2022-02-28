@@ -269,6 +269,31 @@ footer h3{
 }
 
 @media screen and (max-width: 575px){
+    :root{
+        font-size: 16px;
+    }
 
+    .card-container{
+        width: 100%;
+    }
 
+    .card{
+        flex: 0 0 45%;
+    }
+
+    .contact-info ul{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-info li{
+        background-color: var(--alternative);
+        color: var(--clear);
+        padding: 1.5% 2.5%;
+        width: 45%;
+        margin-bottom: 2.5%;
+        border-radius: 15px;
+
+    }
 }
