@@ -1,5 +1,5 @@
 :root{
-    --accent:#EBA0A6;
+    --accent: rgb(235, 160, 166);
     --secondary:#AFA3B4;
     --clear:#EABFA0;
     --dark:#3F3637;
@@ -31,10 +31,12 @@ header{
     border-radius: 0 15px 0 0;
     line-height: 1.5;
     padding-left: 1.5vw;
+    font-size: 1.5rem;
+    text-shadow: rgba(63, 54, 55, .3) 10px 10px 10px;
 }
 
 header nav{
-    padding: 0 3.5%;
+    padding: 0 4%;
     align-self: flex-end;
     color: var(--secondary)
 }
@@ -42,6 +44,9 @@ header nav{
 header nav a{
     padding-right: 2vw;
     flex-grow: 1;
+    font-size: 1.3rem;
+    color: var(--clear);
+    font-weight: bold;
 }
 
 .hero-display{
@@ -62,6 +67,7 @@ header nav a{
     margin-bottom: 25px;
     padding: 25px 25% 25px 25px;
     border-radius: 15px 0 0 0;
+    opacity: .8;
 }
 
 .about-me{
@@ -76,6 +82,7 @@ header nav a{
     border-right: var(--accent) 7px solid;
     margin: 0 20px 0 0;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .about-me div{
@@ -85,6 +92,7 @@ header nav a{
 .about-me div p{
     /* width: 80%; */
     flex: 0 1 80%;
+    font-size: 1.4rem;
 }
 
 
@@ -101,6 +109,7 @@ header nav a{
     border-right: var(--accent) 7px solid;
     margin: 0 20px 0 0;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 
@@ -124,8 +133,10 @@ header nav a{
 }
 
 .card h4, .card p{
-    background-color:#AFA3B4;
+    background-color:rgba(63, 54, 55, .6);
     color: #EABFA0;
+    font-size: 1.5rem;
+    padding-left: 5%;
 }
 
 .card1{
@@ -166,7 +177,9 @@ footer h3{
     margin: 0 20px 0 0;
     background-color: var(--accent);
     text-align: center;
-    padding: 15px 15px
+    padding: 15px 15px;
+    font-size: 1.8rem;
+    border-radius: 0 15px 0 0;
 }
 
 .contact-info{
@@ -175,12 +188,19 @@ footer h3{
 
 .contact-info ul{
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
+    color: var(--alternative);
+
 }
 
 .contact-info ul li {
+    font-weight: bold;
     list-style: none;
     flex-wrap: wrap;
+    font-size: 1.6rem;
+    align-items: center;
+    text-shadow: rgba(63, 54, 55, .3) 10px 10px 10px;
 }
 
 /* MEDIA QUERIES FOR DIFFERENT SCREEN SIZES */
@@ -266,6 +286,23 @@ footer h3{
 
 @media screen and (max-width: 768px){
 
+    .contact-info ul{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-info li{
+        font-size: 1rem;
+        background-color: var(--alternative);
+        color: var(--clear);
+        padding: 1.5% 2.5%;
+        width: 65%;
+        margin-bottom: 2.5%;
+        border-radius: 15px;
+
+    }
+
 }
 
 @media screen and (max-width: 575px){
@@ -278,7 +315,7 @@ footer h3{
     }
 
     .card{
-        flex: 0 0 45%;
+        flex: 0 0 90%;
     }
 
     .contact-info ul{
@@ -288,10 +325,11 @@ footer h3{
     }
 
     .contact-info li{
+        font-size: 1rem;
         background-color: var(--alternative);
         color: var(--clear);
         padding: 1.5% 2.5%;
-        width: 45%;
+        width: 65%;
         margin-bottom: 2.5%;
         border-radius: 15px;
 
