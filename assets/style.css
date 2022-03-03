@@ -4,6 +4,7 @@
     --clear:#EABFA0;
     --dark:#3F3637;
     --alternative:#A485B3;
+    --dark-sdw: rgba(63, 54, 55, .3) 10px 10px 10px;
     font-size: 18px;
 }
 
@@ -18,7 +19,6 @@ header{
     background-color: var(--dark);
     color: var(--clear);
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-evenly;
     align-items: center;
     padding: 3.5% 0;
@@ -31,13 +31,12 @@ header{
 .title-name{
     background-color: var(--accent);
     flex: 0 0 100%;
-    width: 100%;
     color: var(--dark);
     border-radius: 0 15px 0 0;
     line-height: 1.5;
-    padding-left: 1.5vw;
+    padding-left: 3rem;
     font-size: 1.5rem;
-    text-shadow: rgba(63, 54, 55, .3) 10px 10px 10px;
+    text-shadow: var(--dark-sdw);
 }
 
 header nav{
@@ -57,7 +56,7 @@ header nav a{
 
 header nav a:hover{
     color: white;
-    text-decoration:wavy;
+    text-shadow: 0 0 10px var(--alternative);
 }
 
 .title-avatar {
@@ -90,66 +89,54 @@ header nav a:hover{
 .about-me{
     display: flex;
     width: 100%;
-    /* flex-wrap: wrap; */
     margin-bottom: 30px;
+    margin-top: 6rem;
 }
 
-.about-me h2{
+.about-me h2,
+.my-work h2{
     width: 20%;
+    color: var(--alternative);
     border-right: var(--accent) 7px solid;
     margin: 0 20px 0 0;
     text-align: center;
     font-size: 1.8rem;
+    text-shadow: var(--dark-sdw);
 }
 
-.about-me div{
+.about-me p{
     width: 80%;
-}
-
-.about-me div p{
-    /* width: 80%; */
     flex: 0 1 80%;
     font-size: 1.4rem;
     line-height: 2.5rem;
 }
 
-
-
 .my-work{
     display: flex;
     width: 100%;
-    /* flex-wrap: wrap; */
     margin-bottom: 30px;
-}
-
-.my-work h2{
-    width: 20%;
-    border-right: var(--accent) 7px solid;
-    margin: 0 20px 0 0;
-    text-align: center;
-    font-size: 1.8rem;
+    margin-top: 6rem;
 }
 
 
 .card-container{
     display:flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 80%;
+    margin: 0 auto;
 }
 
 .card{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    justify-content: flex-end;
     width: 20vw;
     height: 20vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    margin: 0 10px 30px 10px;
-    padding-left: 0 1.5%;
-    border-radius: 2% 2% 0 0;
+    margin: 15px;
     position: relative;
 }
 
@@ -164,10 +151,11 @@ header nav a:hover{
     cursor: pointer;
 }
 
-.card h4, .card p{
+.card h4, 
+.card p{
     background-color:rgba(63, 54, 55, .6);
     color: #EABFA0;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     position: relative;
     z-index: 1;
 }
@@ -201,19 +189,22 @@ header nav a:hover{
 footer {
     display: flex;
     width: 100%;
-    /* flex-wrap: wrap; */
     margin-bottom: 30px;
     align-items: center;
+    margin-top: 8rem;
+
 }
 
 footer h3{
     width: 20%;
     margin: 0 20px 0 0;
     background-color: var(--accent);
+    color: var(--dark);
     text-align: center;
     padding: 15px 15px;
     font-size: 1.8rem;
     border-radius: 0 15px 0 0;
+    font-size: .96rem;
 }
 
 .contact-info{
@@ -222,10 +213,8 @@ footer h3{
 
 .contact-info ul{
     display: flex;
-    width: 100%;
     justify-content: space-evenly;
-    color: var(--alternative);
-
+    color: var(--clear);
 }
 
 .contact-info ul li {
@@ -235,9 +224,14 @@ footer h3{
     font-size: 1.6rem;
     align-items: center;
     text-align: center;
-    text-shadow: rgba(63, 54, 55, .3) 10px 10px 10px;
+    text-shadow: var(--dark-sdw);
 }
 
+.contact-info ul li a{
+    text-decoration: none;
+    color: var(--alternative);
+    font-size: .96rem;
+}
 /* MEDIA QUERIES FOR DIFFERENT SCREEN SIZES */
 
 @media screen and (max-width: 1267px){
@@ -262,11 +256,12 @@ footer h3{
         }
 
         footer h3{
-            font-size: .9rem;
+            font-size: 1.5rem;
         }
 
         footer a{
-            font-size: .8rem;
+            font-size: 1.3rem;
+            color: var(--clear);
         }
 
     }
@@ -306,33 +301,22 @@ footer h3{
         align-items: center;
     }
 
-    .about-me h2{
+    .about-me h2,
+    .my-work h2 {
         border: none;
         background-color: var(--clear);
+        color: var(--dark);
         width: 75%;
         align-self: flex-start;
         text-align: end;
         padding: 1.5% 15% 1.5% 0;
         margin-bottom: 1.5%;
         border-radius: 0 15px 15px 0;
-        color: #3F3637;
     }
 
     .my-work{
         flex-direction: column;
         align-items: center;
-    }
-
-    .my-work h2 {
-        border: none;
-        background-color: var(--clear);
-        width: 75%;
-        align-self: flex-start;
-        text-align: end;
-        padding: 1.5% 15% 1.5% 0;
-        margin-bottom: 1.5%;
-        border-radius: 0 15px 15px 0;
-        color: #3F3637;
     }
 
     .card{
@@ -352,6 +336,7 @@ footer h3{
         margin-bottom: 2%;
 
     }
+
 }
 
 
@@ -367,10 +352,10 @@ footer h3{
         align-items: center;
     }
 
-    .contact-info ul li{
+    .contact-info ul li {
         font-size: 1rem;
-        background-color: var(--alternative);
-        color: var(--clear);
+        background-color: rgba(186, 156, 226, 0.178);
+        color: var(--clear); 
         padding: 1.5% 2.5%;
         width: 65%;
         margin-bottom: 2.5%;
@@ -404,9 +389,9 @@ footer h3{
         align-items: center;
     }
 
-    .contact-info ul li a{
+    .contact-info ul li {
         font-size: 1rem;
-        background-color: var(--alternative);
+        background-color: rgba(186, 156, 226, 0.178);
         color: var(--clear);
         padding: 1.5% 2.5%;
         width: 65%;

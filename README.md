@@ -1,5 +1,5 @@
 # Web-Portfolio
-A website portfolio that showcases my most recent projects
+A website portfolio example that will eventually showcase my most recent projects
 
 This project is built with CSS tools like:
 
