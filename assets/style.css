@@ -18,15 +18,20 @@ header{
     background-color: var(--dark);
     color: var(--clear);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
     align-items: center;
     padding: 3.5% 0;
 }
 
+.title-section{
+    width: 100%;
+}
+
 .title-name{
     background-color: var(--accent);
-    flex: 0 1 50%;
+    flex: 0 0 100%;
+    width: 100%;
     color: var(--dark);
     border-radius: 0 15px 0 0;
     line-height: 1.5;
@@ -36,17 +41,29 @@ header{
 }
 
 header nav{
-    padding: 0 4%;
-    align-self: flex-end;
-    color: var(--secondary)
+    color: var(--secondary);
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 header nav a{
-    padding-right: 2vw;
-    flex-grow: 1;
+    text-decoration: none;
+    padding: 0 3rem;
     font-size: 1.3rem;
     color: var(--clear);
     font-weight: bold;
+}
+
+header nav a:hover{
+    color: white;
+    text-decoration:wavy;
+}
+
+.title-avatar {
+    width: 20%;
+    margin: 0 3rem;
+    border-radius: 50%;
 }
 
 .hero-display{
@@ -93,6 +110,7 @@ header nav a{
     /* width: 80%; */
     flex: 0 1 80%;
     font-size: 1.4rem;
+    line-height: 2.5rem;
 }
 
 
@@ -130,18 +148,34 @@ header nav a{
     flex-direction: column;
     justify-content: flex-end;
     margin: 0 10px 30px 10px;
+    padding-left: 0 1.5%;
+    border-radius: 2% 2% 0 0;
+    position: relative;
+}
+
+.card:hover::after {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(63, 54, 55, .7);
+    cursor: pointer;
 }
 
 .card h4, .card p{
     background-color:rgba(63, 54, 55, .6);
     color: #EABFA0;
     font-size: 1.5rem;
-    padding-left: 5%;
+    position: relative;
+    z-index: 1;
 }
 
 .card1{
     background-image: url(./images/book.jpg);
     flex: 2 0 100% ;
+    height: 40rem;
 }
 .card2{
     background-image: url(./images/calculator.jpg);
@@ -206,7 +240,42 @@ footer h3{
 
 /* MEDIA QUERIES FOR DIFFERENT SCREEN SIZES */
 
+@media screen and (max-width: 1267px){
+        header{
+            flex-direction: column;
+        }
+
+        .title-avatar{
+            order: 1;
+        }
+
+        .title-section{
+            order: 2;
+            width: 100%;
+            padding-top: 2rem;
+        }
+
+        header .title-name{
+            border-radius: 0 20px 20px 0;
+            width: 80%;
+            align-self: flex-start;
+        }
+
+        footer h3{
+            font-size: .9rem;
+        }
+
+        footer a{
+            font-size: .8rem;
+        }
+
+    }
+
 @media screen and (max-width: 980px){
+    :root{
+        font-size: .8rem;
+    }
+
     header{
         flex-direction: column;
     }
@@ -281,12 +350,17 @@ footer h3{
         background-color: var(--accent);
         width: 100%;
         margin-bottom: 2%;
+
     }
 }
 
 
 @media screen and (max-width: 768px){
 
+    :root{
+        font-size: .8rem;
+    }
+    
     .contact-info ul{
         flex-direction: column;
         text-align: center;
@@ -307,8 +381,9 @@ footer h3{
 }
 
 @media screen and (max-width: 575px){
+
     :root{
-        font-size: 16px;
+        font-size: .6rem;
     }
 
     .card-container{
@@ -319,13 +394,17 @@ footer h3{
         flex: 0 0 90%;
     }
 
+    footer h3{
+        font-size: 1.5rem;
+    }
+
     .contact-info ul{
         flex-direction: column;
         text-align: center;
         align-items: center;
     }
 
-    .contact-info li{
+    .contact-info ul li a{
         font-size: 1rem;
         background-color: var(--alternative);
         color: var(--clear);
@@ -333,6 +412,6 @@ footer h3{
         width: 65%;
         margin-bottom: 2.5%;
         border-radius: 15px;
-
+        font-size: 1.5rem;
     }
 }
