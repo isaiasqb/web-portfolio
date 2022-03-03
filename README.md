@@ -11,6 +11,7 @@ This project is built with CSS tools like:
 
 * People see the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them.
 
+```
 WHEN I click one of the links in the navigation
 THEN the UI scrolls to the corresponding section
 
@@ -25,3 +26,9 @@ THEN I am taken to that deployed application
 
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
+```
+---
+
+## Fully Deployed Website Example
+
+![Fully Deployed Website Example](./assets/images/mock-up.png)
