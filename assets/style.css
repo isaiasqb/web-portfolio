@@ -166,7 +166,7 @@ header nav a:hover{
 }
 
 .card1{
-    background-image: url(./images/book.jpg);
+    background-image: url(./images/book-club.jpg);
     flex: 2 0 100% ;
     height: 35rem;
 }
